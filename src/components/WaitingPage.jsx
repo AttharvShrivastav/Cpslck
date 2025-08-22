@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Typewriter from './Typewriter'; 
+import TypingAnime from './TypingAnime'; 
 import Subtext from './Subtext';
 
-// --- Configuration Constants ---
 const HEADLINE_TEXT = "Composing Brilliance…";
 const SUBTEXT_TEXT = "Great things are in the works. Please pardon the masterpiece-in-progress.";
 const TYPING_SPEED_HEADLINE = 120;
@@ -12,7 +11,6 @@ function WaitingPage() {
   const [displayedHeadline, setDisplayedHeadline] = useState('');
   const [isHeadlineComplete, setIsHeadlineComplete] = useState(false);
 
-  // This useEffect handles the typewriter logic for the headline
   useEffect(() => {
     if (isHeadlineComplete) return;
 
@@ -32,7 +30,7 @@ function WaitingPage() {
 
   return (
     <main className="container">
-      <Typewriter text={displayedHeadline} />
+      <TypingAnime text={displayedHeadline} />
       <Subtext text={SUBTEXT_TEXT} startAnimation={isHeadlineComplete} />
     </main>
   );
