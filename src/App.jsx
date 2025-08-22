@@ -14,16 +14,16 @@ function App() {
 
   return (
     <>
-      {/* {!isSiteVisible ? (
+      {!isSiteVisible ? (
         <LoadingScreen onEnter={handleEnterSite} />
       ) : (
         // This is where your main website content would go
         <div className="container">
           <h1 style={{ fontSize: '3rem', color: 'white' }}>Welcome to CAPSLOCK.</h1>
         </div>
-      )} */}
+      )}
       {/* <WaitingPage /> */}
-      <AwwwardsColumns />
+      {/* <AwwwardsColumns /> */}
     </>
   );
 }
